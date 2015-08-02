@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/common.inc"%>
+<%@ include file="/WEB-INF/views/common.inc"%>
 
 <link rel="stylesheet"
 	href="http://static.jstree.com/3.0.2/assets/dist/themes/default/style.min.css" />
@@ -91,6 +91,7 @@
 							<td>${contacts.id}</td>
 							<td>test1</td>
 							<td>test2</td>
+							<td><a href="./editcontact">edit</a></td>
 						</tr>
 					</c:forEach>
 				</tbody>

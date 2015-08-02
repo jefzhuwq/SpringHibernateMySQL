@@ -13,23 +13,38 @@
 	</definition>
 	
 	<definition name="pages.first-page" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/first-page.jsp" />   
+		<put-attribute name="body" value="WEB-INF/jsp/pages/first-page.jsp" />   
 	</definition>
 	
 	<definition name="pages.second-page" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/second-page.jsp" />   
+		<put-attribute name="body" value="WEB-INF/jsp/pages/second-page.jsp" />   
 	</definition>
 	
 	<definition name="pages.contacts" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/contacts.jsp" />   
+		<put-attribute name="body" value="WEB-INF/jsp/pages/contacts.jsp" />   
 	</definition>
 	
 	<definition name="pages.signup" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/signup.jsp" />   
+		<put-attribute name="body" value="WEB-INF/jsp/pages/signup.jsp" />   
 	</definition>
 	
 	<definition name="pages.newcontact" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/newcontact.jsp" />   
+		<put-attribute name="body" value="WEB-INF/jsp/pages/newcontact.jsp" />   
+	</definition>
+	
+	<definition name="pages.editcontact" extends=".layouts.master">
+		<put-attribute name="body" value="WEB-INF/jsp/pages/editcontact.jsp" />   
 	</definition>
 
+	<definition name="pages.feedsource" extends=".layouts.master">
+		<put-attribute name="body" value="/WEB-INF/jsp/pages/feedsource.jsp" />   
+	</definition>
+	
+	<definition name="pages.feedsourcedetail" extends=".layouts.master">
+		<put-attribute name="body" value="/WEB-INF/jsp/pages/feedsourcedetail.jsp" />   
+	</definition>
+	
+	<definition name="pages.feedinfodetail" extends=".layouts.master">
+		<put-attribute name="body" value="WEB-INF/jsp/pages/feedinfodetail.jsp" />   
+	</definition>
 </tiles-definitions>

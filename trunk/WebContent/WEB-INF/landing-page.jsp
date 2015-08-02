@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/common.inc" %>
+<%@ include file="/WEB-INF/views/common.inc" %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/common.inc" %>
+<%@ include file="/WEB-INF/views/common.inc" %>
 
 <%@page import="main.java.controller.SignupController"%>
 <%@page import="main.java.form.SignupForm"%>

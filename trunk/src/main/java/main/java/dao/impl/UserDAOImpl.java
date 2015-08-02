@@ -5,6 +5,7 @@ import java.util.List;
 import main.java.dao.IUserDAO;
 import main.java.model.User;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -30,4 +31,9 @@ public class UserDAOImpl implements IUserDAO {
         }
 	}
 	
+	public User findByName(String userName) {
+		Query query = sessionFactory.getCurrentSession().createQuery("from User where userName= :userName");
+		query.setParameter("userName", userName);
+		return (User)query.uniqueResult();
+	}
 }
