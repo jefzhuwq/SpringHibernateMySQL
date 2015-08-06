@@ -46,24 +46,19 @@
 <!--     <mvc:resources mapping="/jquery_ui_resource/**" location="/jquery_ui_resource/"/> -->
     <mvc:default-servlet-handler/>
 	<!-- Setup tiles -->
-<!-- 	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer"> -->
-<!--     	<property name="definitions"> -->
-<!--     		<list> -->
-<!--     			<value>/WEB-INF/tiles/tiles-pages.xml</value> -->
-<!--     		</list> -->
-<!--     	</property> -->
-<!-- 	</bean> -->
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+    	<property name="definitions">
+    		<list>
+    			<value>/WEB-INF/tiles/tiles-pages.xml</value>
+    		</list>
+    	</property>
+	</bean>
 	
-<!-- 	<bean id="tilesViewResolver" class="org.springframework.js.ajax.AjaxUrlBasedViewResolver"> -->
-<!-- 		<property name="order" value="1"/> -->
-<!--     	<property name="viewClass" value="org.springframework.webflow.mvc.view.FlowAjaxTilesView"/> -->
-<!--     </bean> -->
-	
-    <bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/WEB-INF/views/" />
-        <property name="suffix" value=".jsp" />
-    </bean>
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.tiles3.TilesView</value>
+		</property>
+	</bean>
 	
     <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
         <property name="basename" value="classpath:messages" />
@@ -72,12 +67,10 @@
     
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
         p:location="/WEB-INF/jdbc.properties" />
-	
-    <bean id="dataSource"
-        class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-        p:driverClassName="${jdbc.driverClassName}"
-        p:url="${jdbc.databaseurl}" p:username="${jdbc.username}"
-        p:password="${jdbc.password}" />
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close" p:driverClassName="${jdbc.driverClassName}"
+		p:url="${jdbc.databaseurl}" p:username="${jdbc.username}" p:password="${jdbc.password}" />
 	
 	
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">

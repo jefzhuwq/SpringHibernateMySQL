@@ -30,7 +30,7 @@ $().ready(function() {
 			lastname: "Please enter your lastname",
 			username: {
 				required: "Please enter a username",
-				minlength: "Your username must consist of at least 2 characters"
+				minlength: "Your username must consist of at least 5 characters"
 			},
 			password: {
 				required: "Please provide a password",
@@ -70,11 +70,10 @@ $().ready(function() {
 		</div>
 		<br>
 		<div>
-			<label for="agree">Please agree to our policy</label>
-			<input type="checkbox" class="checkbox" id="agree" name="agree">
+			<input type="checkbox" class="checkbox" id="agree" name="agree"> Please agree to our policy</checkbox>
 		</div>
 		<div>
-			<button type="submit" class="ui-state-default ui-corner-all ui-state-hover" name="websubmit" id="u_0_9">Sign Up</button>
+			<button type="submit" name="websubmit" id="u_0_9">Sign Up</button>
 		</div>
 	</form:form>
 </div>

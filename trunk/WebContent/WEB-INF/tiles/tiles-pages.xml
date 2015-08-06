@@ -4,47 +4,53 @@
        "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
 <tiles-definitions>
-
-	<definition name=".layouts.master" template="/WEB-INF/jsp/layout/master.jsp">
+	<!-- layouts.master -->
+	<definition name=".layouts.master" template="/WEB-INF/views/layout/master.jsp">
 		<put-attribute name="title" value="" />
-		<put-attribute name="header" value="/WEB-INF/jsp/layout/header.jsp" />
-		<put-attribute name="body" />		
-		<put-attribute name="footer" value="/WEB-INF/jsp/layout/footer.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
+		<put-attribute name="body" />
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
 	</definition>
-	
+
+	<!-- first-page -->
 	<definition name="pages.first-page" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/first-page.jsp" />   
+		<put-attribute name="body" value="WEB-INF/views/pages/first-page.jsp" />
 	</definition>
-	
+
+	<!-- second-pages -->
 	<definition name="pages.second-page" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/second-page.jsp" />   
+		<put-attribute name="body" value="WEB-INF/views/pages/second-page.jsp" />
 	</definition>
-	
+
+	<!-- contacts -->
 	<definition name="pages.contacts" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/contacts.jsp" />   
+		<put-attribute name="body" value="WEB-INF/views/pages/contacts.jsp" />
 	</definition>
-	
+
+	<!-- signup -->
 	<definition name="pages.signup" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/signup.jsp" />   
+		<put-attribute name="body" value="/WEB-INF/views/pages/signup.jsp" />
 	</definition>
-	
+
 	<definition name="pages.newcontact" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/newcontact.jsp" />   
+		<put-attribute name="body" value="WEB-INF/views/pages/newcontact.jsp" />
 	</definition>
-	
+
 	<definition name="pages.editcontact" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/editcontact.jsp" />   
+		<put-attribute name="body" value="WEB-INF/views/pages/editcontact.jsp" />
 	</definition>
 
 	<definition name="pages.feedsource" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/feedsource.jsp" />   
+		<put-attribute name="body" value="/WEB-INF/views/pages/feedsource.jsp" />
 	</definition>
-	
+
 	<definition name="pages.feedsourcedetail" extends=".layouts.master">
-		<put-attribute name="body" value="/WEB-INF/jsp/pages/feedsourcedetail.jsp" />   
+		<put-attribute name="body"
+			value="/WEB-INF/views/pages/feedsourcedetail.jsp" />
 	</definition>
-	
+
 	<definition name="pages.feedinfodetail" extends=".layouts.master">
-		<put-attribute name="body" value="WEB-INF/jsp/pages/feedinfodetail.jsp" />   
+		<put-attribute name="body"
+			value="WEB-INF/views/pages/feedinfodetail.jsp" />
 	</definition>
 </tiles-definitions>
